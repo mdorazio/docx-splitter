@@ -10,17 +10,20 @@ This project is heavily based on [Mammoth](https://github.com/mwilliamson/mammot
 2. Next, the string is split into an array with each element containing the equivalent of a line in the original Word doc (uses regex to do the splitting)
 3. A second array then grabs the HTML tags preceding the actual content of each line.  For example, if a line is `<p><strong><em>Stuff</em></strong></p>` it will grab `<p><strong><em>`
 4. A parsing loop then iterates across the second array and looks for the hgihest-level matching tags from all the lines that don't occur right next to each other.  For example, if the structure is
-```
-<h1>Stuff</h1>
-<h2>Stuff2</h2>
-<h3>Stuff3</h3>
-<p>I'm a paragraph</p>
-<h3>Stuff 4</h3>
-<p>I'm another paragraph</p>
-```
-It will find the `<h3>` tags as the highest matches.
+  
+    ```
+    <h1>Stuff</h1>
+    <h2>Stuff2</h2>
+    <h3>Stuff3</h3>
+    <p>I'm a paragraph</p>
+    <h3>Stuff 4</h3>
+    <p>I'm another paragraph</p>
+    ```
+
+    It will find the `<h3>` tags as the highest matches.
 5. Another loop then runs to split the HTML lines into sections based on where the matches occur.
 6. For demonstration purposes, right now the content sections are then added into <textarea> blocks that are made editable via jHtmlArea.
+
 ##Instructions
 Clone/download/whatever all files and run split.html in a browser.  Use the button to upload a .docx file of your choice and that's it.
 
