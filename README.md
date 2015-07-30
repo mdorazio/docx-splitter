@@ -19,13 +19,15 @@ This project is heavily based on [Mammoth](https://github.com/mwilliamson/mammot
     <h3>Stuff 4</h3>
     <p>I'm another paragraph</p>
     ```
-
     It will find the `<h3>` tags as the highest matches.
 5. Another loop then runs to split the HTML lines into sections based on where the matches occur.
-6. For demonstration purposes, right now the content sections are then added into <textarea> blocks that are made editable via jHtmlArea.
+6. For demonstration purposes, right now the content sections are then added into `<textarea>` blocks that are made editable via jHtmlArea.
 
 ##Instructions
 Clone/download/whatever all files and run split.html in a browser.  Use the button to upload a .docx file of your choice and that's it.
+
+##Demo
+Visit http://mdorazio.com/parse/split.html
 
 ##Caveats
 I banged this out in a few hours of trial and error without much thought to code elegance.  As a result, it's currently somewhat of a mess and is definitely not efficient.  It's also important to note that Mammoth purposely forces Word .docx content into well-formatted HTML, so it discards formatting including colors, font sizes, and font typefaces.  If you need to retain this styling information, you'll need to find another library.
